@@ -23,6 +23,7 @@ $(document).ready(function(){
     $(this).html("x");
     currPlayer = lastPlayer === 'x' ? "o" : "x";
     board[playmv] = currPlayer;
+    $(this).html(currPlayer);
     lastPlayer = currPlayer;
     dataSets();
     for (i = 0; i < 8; i++) {
