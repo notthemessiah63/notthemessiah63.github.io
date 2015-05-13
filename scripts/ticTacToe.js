@@ -31,9 +31,11 @@ $(document).ready(function(){
       for (i = 0; i < 8; i++) {
         switch (winLines[i]) {
           case "xxx":
+            alert("Winner is 'X'")
              i = 8
             break;
           case "ooo":
+            alert("Winner is 'O'")
              i = 8
             break;
           default:
