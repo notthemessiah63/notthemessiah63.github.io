@@ -17,6 +17,19 @@ function dataSets() {
   winLines['6'] = board[0]+board[4]+board[8]; //winD1
   winLines['7'] = board[2]+board[4]+board[6]; //winD2
 }
+
+function boardReset(winner) {
+  board = ['','','','','','','','',''];
+  $('.row').text("");
+  alert("Yeah the Winner is player " +winner);
+  var winText = "You are the Winner"
+  if (winner == 'x') {
+    $('#playerX').text(winText);
+  } else {
+    $('#playerO').text(winText);
+  }
+}
+
 $(document).ready(function(){
   $('.row').on('click', function(){
     var playmv = Number(this.id);
@@ -31,18 +44,18 @@ $(document).ready(function(){
       for (i = 0; i < 8; i++) {
         switch (winLines[i]) {
           case "xxx":
-            alert("Winner is 'X'")
+            boardReset(currPlayer);
              i = 8
             break;
           case "ooo":
-            alert("Winner is 'O'")
+            boardReset(currPlayer);
              i = 8
             break;
           default:
         }
       }
     } else {
-      console.log('really?')
+      alert('Try again, that square is already taken')
     }
 //--------------------
   })
