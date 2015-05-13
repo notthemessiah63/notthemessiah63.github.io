@@ -20,22 +20,28 @@ function dataSets() {
 $(document).ready(function(){
   $('.row').on('click', function(){
     var playmv = Number(this.id);
-    $(this).html("x");
-    currPlayer = lastPlayer === 'x' ? "o" : "x";
-    board[playmv] = currPlayer;
-    $(this).html(currPlayer);
-    lastPlayer = currPlayer;
-    dataSets();
-    for (i = 0; i < 8; i++) {
-      switch (winLines[i]) {
-        case "xxx":
-           i = 8
-          break;
-        case "ooo":
-           i = 8
-          break;
-        default:
+ //   console.log(board[playmv]);
+//--------------------
+    if (board[playmv] == '') {
+      currPlayer = lastPlayer === 'x' ? "o" : "x";
+      board[playmv] = currPlayer;
+      $(this).html(currPlayer);
+      lastPlayer = currPlayer;
+      dataSets();
+      for (i = 0; i < 8; i++) {
+        switch (winLines[i]) {
+          case "xxx":
+             i = 8
+            break;
+          case "ooo":
+             i = 8
+            break;
+          default:
+        }
       }
+    } else {
+      console.log('really?')
     }
+//--------------------
   })
-});
+})

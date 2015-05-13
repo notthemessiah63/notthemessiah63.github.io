@@ -1,10 +1,56 @@
+body {
+  border: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
+.containerWing {
+  display: inline-block;
+  border: 2px;
+  border-color: blue;
+  border-style: solid;
+  height: 600px;
+  width: 300px;
+  margin: 20px;
+}
+
+.containerLeft {
+  display: inline-block;
+  border: 2px;
+  border-color: yellow;
+  border-style: solid;
+}
+
+.containerCentre {
+  display: inline-block;
+  vertical-align: top;
+  border: 2px;
+  border-color: green;
+  border-style: solid;
+  height: 600px;
+  width: 500px;
+  margin: 20px;
+}
+
 .board {
   display: inline-block;
 }
+
 .row {
   border: 2px;
   border-color: red;
   border-style: solid;
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 48px;
+  margin-top: 30px;
+}
+
+.containerRight {
+  display: inline-block;
+  border: 2px;
+  border-color: pink;
+  border-style: solid;
 }
