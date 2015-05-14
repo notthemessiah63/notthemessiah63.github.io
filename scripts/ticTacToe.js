@@ -16,11 +16,12 @@ function dataSets() {
   winLines['4'] = board[1]+board[4]+board[7]; //winR2
   winLines['5'] = board[2]+board[5]+board[8]; //winR3
   winLines['6'] = board[0]+board[4]+board[8]; //winD1
-  winLines['7'] = board[2]+board[4]+board[6]; //winD2
+  winLines['7'] = board[2]+board[4]+board[6]; //winD2 
 }
 
 function boardReset() {
-  board = ['','','','','','','','','']; moves = 0;
+  board = ['','','','','','','','','']; 
+  moves = 0;
   $('.row').text("");
   $('#playerX').text("Ready to Start");
   $('#playerO').text("");
@@ -59,6 +60,7 @@ $(document).ready(function(){
              i = 8
             break;
           default:
+            console.log("moves = "+moves)
             if (moves == 9) {
               alert("No winners here - you have a tie!");
               boardReset();
