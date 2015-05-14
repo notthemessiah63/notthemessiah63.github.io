@@ -1,12 +1,16 @@
 body {
   background-color: black;
   border: 0px;
-  border-color: black;
+  border-color: white;
   border-style: solid;
 }
 
-.containerMain'{
-  margin:auto;
+.containerMain{
+  border: 0px;
+  border-style: solid;
+  border-color: yellow;
+  margin:3% auto;
+  width:90%;
 }
 .containerWing {
   display: inline-block;
@@ -15,8 +19,7 @@ body {
   border-color: blue;
   border-style: solid;
   height: 600px;
-  width: 300px;
-  margin: 10px;
+  width: 360px;
 }
 
 .containerLeft {
@@ -79,8 +82,7 @@ body {
   width: 300px;
 }
 .playerImage {
-/*  max-height: 300px;
-  background-size: 100% 100%;*/
+  margin-left: 10%;
 }
 #gameTitle {
   
@@ -103,20 +105,22 @@ body {
   color: yellow;
   font-size: 56px;
 }
+
+
 #PlayerXlabel {
   /* div to display player name label under player O Image */
-  margin-left: 10%;
-  font-size: 48px;
-  font-style: impact;
+  margin-left: 30%;
+  font-size: 28px;
+/*  font-family: impact;*/
   color: yellow;
-  background-size: 100% 100%;
+/*  background-size: 100% 100%;*/
 
 }
 #PlayerOlabel {
   /* div to display player name label under player X Image */
-  margin-left: 25%;
-  font-size: 48px;
-  font-style: impact;
+  margin-left: 30%;
+  font-size: 28px;
+/*  font-family: impact;*/
   color: yellow;
 }
 
@@ -131,18 +135,30 @@ body {
   color: yellow;
 }
 
-#playerX {
+#playerX img {
 /* div to display feedback information to player X */
-  margin-left: 20%;
-  color: yellow;
-  font-size: 80px;
-  color: white;
+  margin-left:60px;
+  margin-top:20px;
+  background-repeat:no-repeat;
+/*  background-image: url(../imagefiles/trans-reset.png);*/
+  background-size: 100% 100%;
+  background-color: white;
+  border-radius: 7px;
+  border: 2px solid #BADA55;
+  height:200px;
+  width:200px;
 }
-#playerO {
+#playerO img {
 /* div to display feedback information to player O */
-  margin-left: 20%;
-  color: yellow;
-  font-size: 80px;
-  color: white;
+  margin-left:60px;
+  margin-top:20px;
+  background-repeat:no-repeat;
+/*  background-image: url(../imagefiles/trans-reset.png);*/
+  background-size: 100% 100%;
+  background-color: white;
+  border-radius: 7px;
+  border: 2px solid #BADA55;
+  height:200px;
+  width:200px;
 }
 
