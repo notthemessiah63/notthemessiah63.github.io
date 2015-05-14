@@ -35,7 +35,7 @@ body {
   display: inline-block;
   vertical-align: top;
   background-color: black;
-  border: 1px;
+  border: 0px;
   border-color: pink;
   border-style: solid;
   height: 600px;
@@ -99,7 +99,9 @@ body {
 /*end of trying stuff out*/
 }
 #gameInfo {
-
+  margin-left: 20%;
+  color: yellow;
+  font-size: 56px;
 }
 #PlayerXlabel {
   /* div to display player name label under player O Image */

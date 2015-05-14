@@ -4,6 +4,7 @@ var winC1 = '';var winC2 = ''; var winC3 = '';
 var winR1 = ''; var winR2 = ''; var winR3 = ''; 
 var winD1 = ''; var winD2 = '';
 var moves = 0; 
+var gameWinner = ""
 // define all combinations of win lines 
 var winLines = {
 };
@@ -22,6 +23,7 @@ function dataSets() {
 function boardReset() {
   board = ['','','','','','','','','']; 
   moves = 0;
+  gameWinner = ""
   $('.row').text("");
   $('#playerX').text("Ready to Start");
   $('#playerO').text("");
@@ -29,19 +31,25 @@ function boardReset() {
 
 function processWinner(winner) {
   alert("Yeah the Winner is player " +winner);
-  var winText = "You are the Winner"
+  var winText = "YOU WIN!"
   if (winner == 'x') {
     $('#playerX').text(winText);
-  } else {
+    $('#gameInfo').text("X-Men wins!");
+  } else if (winner == 'o') {
     $('#playerO').text(winText);
+    $('#gameInfo').text("Omen wins!");
+  } else {
+    $('#gameInfo').text("Nobody wins!");
   }
+  gameWinner = winner;
+  alert("game winner is "+gameWinner)
 }
 
 $(document).ready(function(){
   $('.row').on('click', function(){
     var playmv = Number(this.id);
 //------P L A Y   T I C   T A C  T O E --------------
-    if (board[playmv] == '') {
+    if (board[playmv] == '' && gameWinner == '') {
       moves +=1;
       console.log(moves);
       currPlayer = lastPlayer === 'x' ? "o" : "x";
@@ -60,15 +68,17 @@ $(document).ready(function(){
              i = 8
             break;
           default:
-            console.log("moves = "+moves)
             if (moves == 9) {
-              alert("No winners here - you have a tie!");
-              boardReset();
+              processWinner('TIE');
             }
         }
       }
     } else {
-      alert('Try again, that square is already taken')
+      if (gameWinner == '') {
+        alert('Try again, that square is already taken');
+      } else {
+        alert('The game has ended, DOH!! hit "Reset" for another game');
+      }
     }
 
   })
