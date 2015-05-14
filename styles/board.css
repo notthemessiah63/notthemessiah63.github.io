@@ -1,6 +1,6 @@
 body {
-  background-color: yellow;
-  border: 2px;
+  background-color: black;
+  border: 0px;
   border-color: black;
   border-style: solid;
 }
@@ -10,35 +10,32 @@ body {
 }
 .containerWing {
   display: inline-block;
-  border: 2px;
+  vertical-align: top;
+  border: 0px;
   border-color: blue;
   border-style: solid;
   height: 600px;
   width: 300px;
-  margin: 20px;
+  margin: 10px;
 }
-.imgContainer{
-  /* div to display both player images on either side of game board */
-  border: 2px;
-  border-color: pink;
-  border-style: solid;
-  width: 250px;
-}
+
 .containerLeft {
   /* div to display player X information on left of game board */
   display: inline-block;
   vertical-align: top;
-  border: 2px;
+  border: 0px;
   border-color: yellow;
   border-style: solid;
+  width: 300px;
+  height: 400px;
 }
 
 .containerCentre {
   /* div to display board and game information between player panes */
   display: inline-block;
   vertical-align: top;
-  background-color: white;
-  border: 2px;
+  background-color: black;
+  border: 0px;
   border-color: green;
   border-style: solid;
   height: 600px;
@@ -49,7 +46,7 @@ body {
 .board {
 /* container to display single column of game moves on game board */
   display: inline-block;
-  background-color: white;
+  background-color: black;
   vertical-align: top;
   margin: 10px;
 }
@@ -58,11 +55,13 @@ body {
   /* divs to display game moves on game board */
   border-radius: 10px;
   border: 3px solid #BADA55;
+  background-color: #de3812;
   height: 100px;
   width: 100px;
   text-align: center;
   vertical-align: middle;
   font-size: 80px;
+  color: yellow;
   margin-left: 10px;
   margin-bottom: 30px;
   padding-top: 0px;
@@ -73,35 +72,62 @@ body {
   /* div to display player O information on right of game board */
   display: inline-block;
   vertical-align: top;
-  border: 2px;
+  border: 0px;
   border-color: pink;
   border-style: solid;
+  height: 400px;
+  width: 300px;
 }
 .playerImage {
-  max-height: 300px;
-  background-size: 100% 100%;
+/*  max-height: 300px;
+  background-size: 100% 100%;*/
 }
 #gameTitle {
   
 }
 #resetGame {
   /*div - click to reset the game */
-  margin-left: 44%;
+  margin-left: 70%;
+  border-radius: 5px;
+  border: 0px solid #BADA55;
+/*  background-color: black;*/
 }
 #PlayerXlabel {
   /* div to display player name label under player O Image */
-  margin-left: 40%;
+  margin-left: 10%;
+  font-size: 48px;
+  font-style: impact;
+  color: yellow;
+  background-size: 100% 100%;
+
 }
 #PlayerOlabel {
   /* div to display player name label under player X Image */
-  margin-left: 40%;
+  margin-left: 25%;
+  font-size: 48px;
+  font-style: impact;
+  color: yellow;
 }
+
+#playerXlblImg {
+/* div to display player ID image of player X */
+  margin-left: 0%;
+  color: yellow;
+}
+#playerOlblImg {
+/* div to display player ID image of player O */
+  margin-left: 0%;
+  color: yellow;
+}
+
 #playerX {
 /* div to display feedback information to player X */
   margin-left: 40%;
+  color: yellow;
 }
 #playerO {
 /* div to display feedback information to player O */
   margin-left: 40%;
+  color: yellow;
 }
 
