@@ -25,12 +25,12 @@ function boardReset() {
   moves = 0;
   gameWinner = ""
   $('.row').text("");
-  $('#playerX').text("Ready to Start");
+  $('#playerX').text("");
   $('#playerO').text("");
+  $('#gameInfo').text("X-Men to start");
 }
 
 function processWinner(winner) {
-  alert("Yeah the Winner is player " +winner);
   var winText = "YOU WIN!"
   if (winner == 'x') {
     $('#playerX').text(winText);
@@ -39,10 +39,9 @@ function processWinner(winner) {
     $('#playerO').text(winText);
     $('#gameInfo').text("Omen wins!");
   } else {
-    $('#gameInfo').text("Nobody wins!");
+    $('#gameInfo').text("Players Tie!");
   }
   gameWinner = winner;
-  alert("game winner is "+gameWinner)
 }
 
 $(document).ready(function(){

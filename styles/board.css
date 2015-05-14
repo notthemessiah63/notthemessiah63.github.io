@@ -133,12 +133,16 @@ body {
 
 #playerX {
 /* div to display feedback information to player X */
-  margin-left: 40%;
+  margin-left: 20%;
   color: yellow;
+  font-size: 80px;
+  color: white;
 }
 #playerO {
 /* div to display feedback information to player O */
-  margin-left: 40%;
+  margin-left: 20%;
   color: yellow;
+  font-size: 80px;
+  color: white;
 }
 
